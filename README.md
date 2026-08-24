@@ -4,6 +4,17 @@ One-page site for Kalpna VW Astrology — personal astrology and tarot readings
 in London. Served as static assets by Cloudflare Workers; there is no build
 step, the files in `public/` are the site.
 
+## Brand
+
+The design follows the Kalpna VW Astrology house style from
+kalpnavwastrology.com: royal blue `#1339a9` on warm off-white `#faf8f5` and
+cream `#fbfae9`, soft-yellow `#f4e991` glows, warm tan `#c0ac93` accents, and
+warm ink `#261e1e` text. Headings are Ibarra Real Nova, UI text is Jost, the
+about sign-off is Aguafina Script, and the brands-strip heading is Fraunces
+(the closest Google Font to the Vibe Worthy logotype). The wordmark is set in
+type — the live site's logo PNG (`kalpna-vb-astrology-logo-2stars.png`) can be
+dropped in later if wanted.
+
 ## Structure
 
 ```
@@ -17,7 +28,7 @@ public/
     css/main.css       extracted page styles
     js/main.js         chart wheel, starfields, moon phases, reveals, guide form
     img/og.jpg         1200×630 social sharing card
-    img/brands/        logos for the brands-worked-with strip, tinted site gold
+    img/brands/        logos for the brands-worked-with strip, in the brand blue
 wrangler.jsonc         assets-only Workers config (no Worker script)
 package.json           wrangler devDependency + dev/deploy/check scripts
 ```
