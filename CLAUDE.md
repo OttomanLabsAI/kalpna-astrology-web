@@ -78,3 +78,4 @@ release, on the owner's request.
 | Version | Title | Description |
 | --- | --- | --- |
 | v1.0 | Kalpna's night sky opens its doors | The site is live as a real website: the full one-page experience — spinning natal chart, readings, kind words and the Big 3 guide — served fast from Cloudflare's edge, with a matching 404 page to guide wanderers home. |
+| v1.1 | The booking button finds its words | The gold booking button in the top navigation now shows its invitation clearly — dark lettering on gold, readable at rest and under the cursor, just like its twin in the hero. |

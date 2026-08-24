@@ -68,6 +68,7 @@ header{
 .nav-links{display:flex;align-items:center;gap:34px}
 .nav-links a{font-size:.78rem;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);transition:color .3s}
 .nav-links a:hover{color:var(--gold-bright)}
+.nav-links a.btn-gold,.nav-links a.btn-gold:hover{color:#1c1608}
 .nav .btn{padding:11px 22px;font-size:.7rem}
 @media(max-width:760px){.nav-links a:not(.btn){display:none}}
 
