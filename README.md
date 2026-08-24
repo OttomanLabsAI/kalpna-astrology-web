@@ -17,6 +17,7 @@ public/
     css/main.css       extracted page styles
     js/main.js         chart wheel, starfields, moon phases, reveals, guide form
     img/og.jpg         1200×630 social sharing card
+    img/brands/        logos for the brands-worked-with strip, tinted site gold
 wrangler.jsonc         assets-only Workers config (no Worker script)
 package.json           wrangler devDependency + dev/deploy/check scripts
 ```

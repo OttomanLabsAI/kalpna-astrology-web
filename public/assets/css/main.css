@@ -190,6 +190,26 @@ header{
 .quote cite{display:block;margin-top:20px;font-family:'Jost',sans-serif;font-style:normal;font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;color:var(--rose)}
 .quote.tall{grid-row:span 2}
 
+/* ---------- brands ---------- */
+.brands{
+  border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);
+  background:var(--sky-3);padding:56px 0 60px;margin-bottom:var(--sp);
+}
+.brands-label{
+  text-align:center;font-size:.68rem;font-weight:500;letter-spacing:.3em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:38px;
+}
+.brands-row{
+  display:flex;flex-wrap:wrap;justify-content:center;align-items:center;
+  column-gap:clamp(30px,4.5vw,58px);row-gap:34px;max-width:960px;margin:0 auto;
+}
+.brands-row img{
+  max-height:38px;max-width:118px;width:auto;height:auto;
+  opacity:.62;transition:opacity .3s ease;
+}
+.brands-row img.tall{max-height:56px}
+.brands-row img:hover{opacity:1}
+
 /* ---------- big 3 ---------- */
 .big3{padding:0 0 var(--sp)}
 .big3-panel{
