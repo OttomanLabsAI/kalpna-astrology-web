@@ -1,0 +1,14 @@
+{
+  "name": "kalpna-astrology-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Kalpna VW Astrology — astrology & tarot readings in London. Static one-page site served from public/ by Cloudflare Workers.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "check": "wrangler deploy --dry-run"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
