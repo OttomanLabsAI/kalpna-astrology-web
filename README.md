@@ -16,6 +16,7 @@ public/
   assets/
     css/main.css       extracted page styles
     js/main.js         chart wheel, starfields, moon phases, reveals, guide form
+    img/og.jpg         1200×630 social sharing card
 wrangler.jsonc         assets-only Workers config (no Worker script)
 package.json           wrangler devDependency + dev/deploy/check scripts
 ```
@@ -46,6 +47,15 @@ the defaults from `wrangler.jsonc` apply, no build command needed.
 
 Everything else (chart wheel, emblems, constellation art) is inline SVG — the
 site loads no images.
+
+## Social sharing card
+
+`public/assets/img/og.jpg` is the Open Graph / Twitter preview image, wired up
+via meta tags in `index.html`. The `og:image` URL is currently root-relative,
+which most platforms resolve fine; Facebook and WhatsApp are strict about
+absolute URLs, so once the site's final domain is connected, change the
+`og:image` and `twitter:image` values to the full `https://…/assets/img/og.jpg`
+URL (and ideally add a matching `og:url`).
 
 ## Known stub
 
