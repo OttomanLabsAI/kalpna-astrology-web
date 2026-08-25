@@ -5,16 +5,21 @@ Standing policy for this repository. Read it before making any change here.
 ## What this repo is
 
 A Cloudflare Workers static-assets site for Kalpna VW Astrology (astrology &
-tarot readings, London). Everything served lives in `public/` and there is no
-build step - the files in that directory are the site. The repo is connected to
+tarot readings, London). `public/index.html` is the client's own homepage — a
+"save complete" export of kalpnavwastrology.com adapted for static hosting —
+with two owner-requested additions injected: the brands strip and the social
+sharing card. Everything served lives in `public/` and there is no build
+step - the files in that directory are the site. The repo is connected to
 Cloudflare Workers Builds, so **every push to `main` deploys to production**.
 
 ```
 public/            everything served
-  index.html
-  404.html
+  index.html       the exported homepage + injected additions
+  404.html         themed not-found page
   favicon.svg
-  assets/css|js|img
+  assets/site      the page's own WordPress/Elementor assets + Freight webfont
+  assets/css       main.css, used by 404.html only
+  assets/img       og.jpg sharing card + brands/ logos
   _headers         security + caching headers
   robots.txt
 wrangler.jsonc     assets-only config, no Worker script
@@ -65,13 +70,17 @@ batches: implement, verify, commit, push.
 
 ## The page itself
 
-Content, design, and behaviour are as supplied by the owner. Do not tidy markup,
-rename classes, rewrite copy, or modernise CSS unless asked - changes to the
-design are their own release, requested deliberately.
+The page is the client's own site, captured as supplied. Do not tidy its
+markup, rename classes, rewrite copy, or restyle it unless asked - changes to
+the design are their own release, requested deliberately. The injected brands
+strip is marked with a `kvw-` class prefix and an HTML comment; keep additions
+scoped that way.
 
-The "Know your Big 3" email form is a front-end stub: it shows the thank-you
-message but sends nothing. Wiring it to an email provider is its own future
-release, on the owner's request.
+Runtime dependencies that live outside this repo (YouTube background video,
+Google font files, the owner's Google Analytics, Calendly, and a few Elementor
+interaction bundles still fetched from the live WordPress install) are listed
+in the README. The Elementor bundles must be vendored before the WordPress
+install is retired.
 
 ## Release ledger
 
@@ -83,3 +92,4 @@ release, on the owner's request.
 | v1.3 | The company Kalpna keeps, in gold | Fifteen famous names — Sony, Puma, Warner Music, the British Fashion Council and more — now shine beneath the client testimonials, quiet proof of the rooms Kalpna's readings have reached. Each wears the site's own gold, so the strip feels born there rather than borrowed. |
 | v1.4 | The brands strip learns Vibe Worthy's handwriting | The heading above the brand logos now carries the Vibe Worthy signature — the same swashy italic lettering, finished with a gold shooting star — and glides gently into view as you scroll down to it. |
 | v2.0 | Daylight comes to Kalpna's universe | The site now wears the true Kalpna VW Astrology colours from her existing home on the web — royal blue ink on warm cream, with sunlit yellow glows — so the new one-pager and the brand finally speak with one voice. Every corner follows: the chart wheel, the moon phases, the brand logos, the sharing card and the little star in the browser tab. |
+| v3.0 | Kalpna's own site takes the stage | The site is now Kalpna's homepage exactly as her visitors know it — her logo, her video sky, her sessions and testimonials — served fast from Cloudflare's edge. Beneath the testimonials, fifteen famous names shine in her royal blue under a heading written in the Vibe Worthy hand, and shared links unfurl with the starlit calling card. |

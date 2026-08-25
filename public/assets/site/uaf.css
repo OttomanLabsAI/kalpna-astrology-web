@@ -1,0 +1,15 @@
+				@font-face {
+					font-family: 'ftb';
+					src: url('/assets/site/fonts/681FTB.woff2') format('woff2');
+					  font-display: auto;
+				}
+
+				.ftb{font-family: 'ftb' !important;}
+
+						h1, h2, h3, h4, h5, h6{
+					font-family: 'ftb' !important;
+				}
+						body, p, blockquote, li, a, strong, b, em, .menu-menu-container li a, .menu-menu-container li span, #menu-menu li a, #menu-menu li span{
+					font-family: 'ftb' !important;
+				}
+		
