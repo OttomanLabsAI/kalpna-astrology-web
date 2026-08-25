@@ -1,15 +1,17 @@
 # Kalpna VW Astrology
 
 Kalpna's own one-page site — the homepage of kalpnavwastrology.com, served as
-static assets by Cloudflare Workers — plus one addition made for the owner: a
-proper social sharing card. There is no build step; the files in `public/` are
-the site.
+static assets by Cloudflare Workers — plus small additions made for the owner:
+a proper social sharing card, and a header that stays pinned with its menu
+visible on every screen size. There is no build step; the files in `public/`
+are the site.
 
 ## Structure
 
 ```
 public/
-  index.html           the exported homepage, with the sharing card wired in
+  index.html           the exported homepage + owner additions (sharing card,
+                       always-visible header)
   404.html             themed not-found page (brand blue)
   favicon.svg          blue chart-star mark
   robots.txt

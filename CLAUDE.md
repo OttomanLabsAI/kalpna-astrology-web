@@ -7,14 +7,15 @@ Standing policy for this repository. Read it before making any change here.
 A Cloudflare Workers static-assets site for Kalpna VW Astrology (astrology &
 tarot readings, London). `public/index.html` is the client's own homepage — a
 "save complete" export of kalpnavwastrology.com adapted for static hosting —
-with one owner-requested addition injected: the social sharing card.
+with two owner-requested additions injected: the social sharing card and the
+always-visible pinned header.
 Everything served lives in `public/` and there is no build step - the files in
 that directory are the site. The repo is connected to
 Cloudflare Workers Builds, so **every push to `main` deploys to production**.
 
 ```
 public/            everything served
-  index.html       the exported homepage + injected sharing card
+  index.html       the exported homepage + injected owner additions
   404.html         themed not-found page
   favicon.svg
   assets/site      the page's own WordPress/Elementor assets + Freight webfont
@@ -94,3 +95,4 @@ install is retired.
 | v2.0 | Daylight comes to Kalpna's universe | The site now wears the true Kalpna VW Astrology colours from her existing home on the web — royal blue ink on warm cream, with sunlit yellow glows — so the new one-pager and the brand finally speak with one voice. Every corner follows: the chart wheel, the moon phases, the brand logos, the sharing card and the little star in the browser tab. |
 | v3.0 | Kalpna's own site takes the stage | The site is now Kalpna's homepage exactly as her visitors know it — her logo, her video sky, her sessions and testimonials — served fast from Cloudflare's edge. Beneath the testimonials, fifteen famous names shine in her royal blue under a heading written in the Vibe Worthy hand, and shared links unfurl with the starlit calling card. |
 | v3.1 | The borrowed brand names bow out | The strip of brand logos beneath the testimonials has been taken down — those names were bound for another project — leaving Kalpna's page exactly as her visitors know it, with the sharing card still in place. |
+| v3.2 | The menu now travels with you | The header no longer drifts away as you read — Kalpna's logo and menu stay quietly pinned to the top, slimming down once you scroll, and on phones and tablets the options are out in the open instead of hidden. Wherever you are on the page, About, Testimonials, Book a Session and Instagram are one tap away. |

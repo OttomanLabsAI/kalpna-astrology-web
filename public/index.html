@@ -626,4 +626,39 @@ var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/kalpnavwastrology.com\/wp
 			<script>
 			/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
 			</script>
-			</body></html>
+			
+<!-- kvw: keep the header options always in view (added for the owner) -->
+<style>
+header.elementor-location-header{position:sticky;top:0;z-index:998}
+header.elementor-location-header.kvw-stuck{box-shadow:0 10px 24px -18px rgba(38,30,30,.35)}
+header.elementor-location-header .elementor-element-405e90c img{transition:width .25s ease}
+header.elementor-location-header.kvw-stuck .elementor-element.elementor-element-405e90c{margin-bottom:6px}
+header.elementor-location-header.kvw-stuck .elementor-element.elementor-element-405e90c img{width:120px !important}
+header.elementor-location-header.kvw-stuck .elementor-element.elementor-element-2f960b35{padding-top:10px !important;padding-bottom:10px !important}
+@media (max-width:1024px){
+  .elementor-970 .elementor-element.elementor-element-3c04830f,
+  .elementor-970 .elementor-element.elementor-element-105bc431{display:block !important}
+  .elementor-970 .elementor-element-3c04830f .elementor-icon-list-items.elementor-inline-items,
+  .elementor-970 .elementor-element-105bc431 .elementor-icon-list-items.elementor-inline-items{display:flex;justify-content:center;flex-wrap:nowrap}
+  .elementor-970 .elementor-element-3c04830f .elementor-icon-list-item,
+  .elementor-970 .elementor-element-105bc431 .elementor-icon-list-item{white-space:nowrap}
+}
+@media (max-width:767px){
+  .elementor-970 .elementor-element.elementor-element-405e90c{margin-bottom:8px}
+  .elementor-970 .elementor-element.elementor-element-405e90c img{width:180px}
+  .elementor-970 .elementor-element-3c04830f .elementor-icon-list-item>a,
+  .elementor-970 .elementor-element-105bc431 .elementor-icon-list-item>a{font-size:14px}
+}
+</style>
+<script>
+(function(){
+  var h=document.querySelector('header.elementor-location-header');
+  if(!h)return;
+  function pad(){document.documentElement.style.scrollPaddingTop=(h.offsetHeight+10)+'px';}
+  function tick(){h.classList.toggle('kvw-stuck',(window.scrollY||document.documentElement.scrollTop)>24);pad();}
+  addEventListener('scroll',tick,{passive:true});
+  addEventListener('resize',pad);
+  tick();
+})();
+</script>
+</body></html>
