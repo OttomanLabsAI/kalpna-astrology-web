@@ -1,15 +1,15 @@
 # Kalpna VW Astrology
 
 Kalpna's own one-page site — the homepage of kalpnavwastrology.com, served as
-static assets by Cloudflare Workers — plus two additions made for the owner: a
-"Brands Kalpna has worked with" strip and a proper social sharing card. There
-is no build step; the files in `public/` are the site.
+static assets by Cloudflare Workers — plus one addition made for the owner: a
+proper social sharing card. There is no build step; the files in `public/` are
+the site.
 
 ## Structure
 
 ```
 public/
-  index.html           the exported homepage, with the additions injected
+  index.html           the exported homepage, with the sharing card wired in
   404.html             themed not-found page (brand blue)
   favicon.svg          blue chart-star mark
   robots.txt
@@ -20,7 +20,6 @@ public/
     site/fonts/        Freight Text Book (681FTB.woff2), the site's body font
     css/main.css       styles for the 404 page only
     img/og.jpg         1200×630 social sharing card
-    img/brands/        brand logos for the worked-with strip
 wrangler.jsonc         assets-only Workers config (no Worker script)
 package.json           wrangler devDependency + dev/deploy/check scripts
 ```
