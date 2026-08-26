@@ -58,6 +58,11 @@ structured data still point at kalpnavwastrology.com, deliberately.
   from `fonts.gstatic.com`.
 - **Google Analytics / Site Kit** — the exported gtag snippet still reports to
   the owner's Google Analytics property.
+- **The photography** — the hero, about and services background photos load
+  from the live WordPress install's media library (they are not part of the
+  export). Their scroll-parallax effect is disabled in favour of stable
+  rendering; vendor the images alongside the Elementor bundles below when the
+  install is retired.
 - **Elementor lazy bundles** — a few interaction scripts (testimonial
   carousel, accordion, text-editor and shared handlers) are fetched at runtime
   from the live WordPress install at kalpnavwastrology.com. This works while
